@@ -28,7 +28,7 @@ La web consiste en:
 - Cuatro cards de productos con sus respectivas imagenes y nombres
 - Footer(links a las paginas principales de facebook,intagram y twiter)
   <img src='./src/assets/navbar.jpg'>
-  <img src='./src/assets/home.jpg'>
+  <img src='./src/assets/Home.jpg'>
   <img src='./src/assets/footer.jpg'>
 
 ## Componente Productos:
