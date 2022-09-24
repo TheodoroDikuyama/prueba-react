@@ -53,6 +53,6 @@ La web consiste en:
 - Input que muestra la cantidad de cuantas veces se ha agregado un producto
 - Boton para eliminar el producto deseado
 - Boton para Finalizar la compra(Mensaje: "La compra fue un exito")
-  <img src='./asssets/sidebar.jpg'>
+  <img src='./src/assets/sidebar.jpg'>
 
 ## Tecnologias utilizadas
