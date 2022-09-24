@@ -1,0 +1,61 @@
+.gridLayout {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  max-width: fit-content;
+  max-height: fit-content;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-top: 5vh;
+
+  .col1 {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 5vw;
+      height: 5vw;
+      margin-right: 3vw;
+      margin-top: 1vw;
+    }
+  }
+
+  .col2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .buttonRemove {
+      border: 0;
+      background-color: #cf0000;
+      color: #fff;
+      margin-top: 1vh;
+      margin-bottom: 1vh;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    h1 {
+      text-align: unset;
+      font-size: small;
+    }
+    span {
+      font-size: small;
+    }
+
+    .containerButtons {
+      input {
+        width: 2vw;
+        text-align: center;
+        margin-left: 0.5vw;
+        margin-right: 0.5vw;
+      }
+      button {
+        width: 2vw;
+        border-radius: 3px;
+        cursor: pointer;
+        background-color: #000000;
+        color: #fff;
+      }
+    }
+  }
+}

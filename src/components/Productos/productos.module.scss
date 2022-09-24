@@ -1,0 +1,26 @@
+@import "../../scss/variables";
+
+.container {
+  .titulo {
+    text-align: center;
+    font-family: $font;
+    position: relative;
+    margin-top: 5vh;
+    margin-bottom: 7vh;
+    cursor: default;
+  }
+  .cardGrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-bottom: 5vh;
+
+    div {
+      display: flex;
+      justify-content: space-around;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

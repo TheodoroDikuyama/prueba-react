@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;600&display=swap%27");
+
+$font: "Kanit", sans-serif;
+
+.gridLayout {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  margin-right: 3vh;
+
+  .columna1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+      width: 30vw;
+      margin: 0 auto;
+    }
+  }
+
+  .columna2 {
+    display: flex;
+    flex-direction: column;
+
+    .descripcion {
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+      h1 {
+        font-size: 25px;
+      }
+    }
+
+    p {
+      font-family: $font;
+      margin-bottom: 2vh;
+      font-size: 20px;
+      margin-top: 2vh;
+    }
+    h1 {
+      font-family: $font;
+      font-size: 50px;
+      font-weight: 600;
+    }
+
+    .carrito {
+      margin-bottom: 0;
+      button {
+        border: 0;
+        padding: 10px;
+        display: inline-flex;
+        align-items: center;
+        font-family: $font;
+        font-weight: 600;
+        border-radius: 3px;
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
+        height: 5vh;
+      }
+
+      button:hover {
+        background-color: #1d1d1d;
+      }
+    }
+  }
+}

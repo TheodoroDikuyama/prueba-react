@@ -1,0 +1,56 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.container {
+  @include flex(flex, column);
+  height: 100%;
+  overflow: hidden;
+
+  .containerImg {
+    @include flex(flex, "", center);
+    margin-top: 15vh;
+
+    img {
+      border-radius: 3px;
+      width: 60vw;
+      height: 30vh;
+      box-shadow: 3px 3px #cecece;
+    }
+  }
+
+  .aboutUs {
+    @include flex(flex, column);
+    margin: 0 auto;
+    width: 60vw;
+    margin-bottom: 15vh;
+
+    h1 {
+      text-align: center;
+      font-family: $font;
+    }
+    p {
+      margin-top: 2vh;
+      text-align: justify;
+      font-family: $font;
+    }
+  }
+
+  .cardGrid {
+    width: 60vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}

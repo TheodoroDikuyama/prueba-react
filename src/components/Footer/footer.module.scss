@@ -1,0 +1,28 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.containerFooter {
+  @include flex(flex, column);
+  border-top: 1px solid #ebebeb;
+  background-color: #ebebeb;
+
+  h1 {
+    text-align: center;
+    margin-top: 5vh;
+    font-family: $font;
+    cursor: default;
+  }
+
+  .redesSociales {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 30vw;
+    margin-top: 5vh;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

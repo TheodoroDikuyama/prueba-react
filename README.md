@@ -2,45 +2,57 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Comandos disponibles
 
-In the project directory, you can run:
+En este proyecto puedes ejecutar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Ejecuta la aplicacion en el entorno de desarrollo\
+Abre [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+La pagina se recargara si haces cambios.\
+Tambien podras ver los errores en la consola.
 
-### `npm test`
+## PRUEBA REACT
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ejercicio orientado a la creacion de un e-commerce haciendo uso de ReacJS.
 
-### `npm run build`
+La web consiste en:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Componente Home:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Header
+- Navbar(links a home y productos)
+- Una imagen que hace de banner publicitario
+- Cuatro cards de productos con sus respectivas imagenes y nombres
+- Footer(links a las paginas principales de facebook,intagram y twiter)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Componente Productos:
 
-### `npm run eject`
+- Header
+- Navbar(links a home y productos)
+- Listado de 20 productos con su respectivo titulo, imagen y precio (link al detalle de cada articulo)
+- Footer(links a las paginas principales de facebook,intagram y twiter)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Componente Detalle:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Header
+- Navbar(links a home y productos)
+- Detalle del producto seleccionado en el componente productos. Contiene: Una imagen agrandada, titulo, precio y descripcion
+- Boton para agregar al carrito
+- Footer(links a las paginas principales de facebook,intagram y twiter)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Componente Sidebar:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Cajon dinamico activado mediante el boton de agregar al carrtio en el componente detalle
+- Este cajon renderiza los productos agregados al carrito de compras
+- Imagen del producto
+- Precio del producto
+- Selectores de cantidad (+) (-)
+- Input que muestra la cantidad de cuantas veces se ha agregado un producto
+- Boton para eliminar el producto deseado
+- Boton para Finalizar la compra(Mensaje: "La compra fue un exito")
+  <img src='./asssets/sidebar.jpg'>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tecnologias utilizadas

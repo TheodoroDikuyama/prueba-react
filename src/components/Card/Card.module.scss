@@ -1,0 +1,31 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.containerCard {
+  @include flex(flex, column);
+  border: 1px solid #7a7a7a;
+  width: 10vw;
+  height: 30vh;
+  margin-bottom: 3vh;
+  border-radius: 3px;
+  box-shadow: 3px 3px #cecece;
+
+  h1 {
+    text-align: center;
+    font-family: $font;
+    font-weight: 600;
+    font-size: medium;
+  }
+  .containerImg {
+    @include flex(flex, center);
+
+    img {
+      width: 5vw;
+    }
+  }
+
+  span {
+    font-family: $font;
+    text-align: center;
+  }
+}
