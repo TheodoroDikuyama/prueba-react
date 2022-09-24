@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Empezando con Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -13,6 +13,10 @@ Abre [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
 
 La pagina se recargara si haces cambios.\
 Tambien podras ver los errores en la consola.
+
+### `npm i`
+
+Instala todas las dependecias necesarias para ejecutar el proyecto
 
 ## PRUEBA REACT
 
@@ -64,4 +68,10 @@ La web consiste en:
 - Boton para Finalizar la compra(Mensaje: "La compra fue un exito")
   <img src='./src/assets/sidebar.jpg'>
 
-## Tecnologias utilizadas
+## Librerias utilizadas:
+
+- Typescript
+- SASS
+- SwetAlert
+- MaterialUi
+- Redux
