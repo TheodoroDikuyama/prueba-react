@@ -17,7 +17,7 @@ const items: { id: number; title: string; route: string }[] = [
   },
 ];
 
-export const Menu: React.FunctionComponent = () => {
+export const Menu: React.FC = () => {
   return (
     <div className={styles.container}>
       <header>

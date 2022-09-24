@@ -1,6 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 import { Dispatch } from "react";
-import { TYPES } from "./shopingAction";
+import { TYPES_SHOPPING } from "./shopingAction";
+import { TYPES_PRODUCT } from "./productAction";
 
 const API_URL = "https://fakestoreapi.com";
 
@@ -12,7 +13,7 @@ export const getProducts: any =
       );
 
       return dispatch({
-        type: "GET_PRODUCTS",
+        type: TYPES_PRODUCT.GET_PRODUCTS,
         payload: productos.data,
       });
     } catch (error) {
@@ -27,7 +28,7 @@ export const getDetails: any =
         `${API_URL}/products/${id}`
       );
       return dispatch({
-        type: "GET_DETAILS",
+        type: TYPES_PRODUCT.GET_DETAILS,
         payload: detailProduct.data,
       });
     } catch (error) {
@@ -37,37 +38,37 @@ export const getDetails: any =
 
 export const getCart: any = () => (dispatch: Dispatch<any>) => {
   return dispatch({
-    type: TYPES.GET_CART,
+    type: TYPES_SHOPPING.GET_CART,
   });
 };
 
 export const addProducToCart: any =
   (id: number) => (dispatch: Dispatch<any>) => {
     return dispatch({
-      type: TYPES.ADD_TO_CART,
+      type: TYPES_SHOPPING.ADD_TO_CART,
       payload: id,
     });
   };
 
 export const clearCart: any = () => (dispatch: Dispatch<any>) => {
   return dispatch({
-    type: TYPES.CLEAR_CART,
+    type: TYPES_SHOPPING.CLEAR_CART,
   });
 };
 
 export const removeFromCart: any =
   (id: number, all?: boolean) => (dispatch: Dispatch<any>) => {
     if (all) {
-      dispatch({ type: TYPES.REMOVE_ALL_FROM_CART, payload: id });
+      dispatch({ type: TYPES_SHOPPING.REMOVE_ALL_FROM_CART, payload: id });
     } else {
-      dispatch({ type: TYPES.REMOVE_ONE_FROM_CART, payload: id });
+      dispatch({ type: TYPES_SHOPPING.REMOVE_ONE_FROM_CART, payload: id });
     }
   };
 
 export const addOneFromCart: any =
   (id: number) => (dispatch: Dispatch<any>) => {
     return dispatch({
-      type: TYPES.ADD_ONE_FROM_CART,
+      type: TYPES_SHOPPING.ADD_ONE_FROM_CART,
       payload: id,
     });
   };

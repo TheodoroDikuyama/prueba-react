@@ -1,8 +1,9 @@
 import styles from "./CartItem.module.scss";
 import { QuantityHooks } from "./hooks";
 import { BsTrash } from "react-icons/bs";
+import { CartProducts } from "../../interfaces/interfaces";
 
-export const CartItem = (props: any) => {
+export const CartItem: React.FC<CartProducts> = (props: CartProducts) => {
   const { title, image, price, quantity, id } = props;
   const { addOne, deleteFromCart } = QuantityHooks();
   return (
@@ -22,7 +23,7 @@ export const CartItem = (props: any) => {
         </button>
         <div className={styles.containerButtons}>
           <button onClick={() => addOne(id)}>+</button>
-          <input placeholder={quantity}></input>
+          <input placeholder={quantity?.toString()}></input>
           <button onClick={() => deleteFromCart(id)}>-</button>
         </div>
       </div>

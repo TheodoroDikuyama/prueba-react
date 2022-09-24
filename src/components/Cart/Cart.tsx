@@ -1,10 +1,12 @@
+import * as React from "react";
 import { BsCartPlus } from "react-icons/bs";
 import styles from "./Cart.module.scss";
 import { CartItem } from "../CartItem/CartItem";
 import { CustomHook } from "./hooks";
 import { Divider } from "@mui/material";
+import { CartProducts } from "../../interfaces/interfaces";
 
-export const Cart: any = () => {
+export const Cart: React.FC = () => {
   const { cart, checkOut } = CustomHook();
   return (
     <div className={styles.containerCart}>
@@ -17,7 +19,7 @@ export const Cart: any = () => {
       <Divider light />
 
       <div>
-        {cart?.map((c: any, index: number) => (
+        {cart?.map((c: CartProducts, index: number) => (
           <CartItem
             key={index}
             title={c.title}
@@ -33,7 +35,10 @@ export const Cart: any = () => {
         Total:
         {cart
           ?.reduce(
-            (acc: number, { price, quantity }: any) => acc + quantity * price,
+            (
+              acc: number,
+              { price, quantity }: { price: number; quantity: number }
+            ) => acc + quantity * price,
             0
           )
           .toFixed(2)}

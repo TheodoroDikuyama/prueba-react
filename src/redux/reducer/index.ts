@@ -1,37 +1,36 @@
-import { TYPES } from "../actions/shopingAction";
+import { TYPES_SHOPPING } from "../actions/shopingAction";
+import { TYPES_PRODUCT } from "../actions/productAction";
 
 const initialState: any = {
-  porducts: [],
+  products: [],
   details: {},
   cart: [],
 };
 
-export function rootReducer(state = initialState, action: any) {
+export function rootReducer(state = initialState, action: any): any {
   switch (action.type) {
-    case "GET_PRODUCTS":
+    case TYPES_PRODUCT.GET_PRODUCTS:
       return {
         ...state,
         products: action.payload,
       };
-    case "GET_DETAILS":
+    case TYPES_PRODUCT.GET_DETAILS:
       return {
         ...state,
         details: action.payload,
       };
 
-    case TYPES.ADD_TO_CART:
+    case TYPES_SHOPPING.ADD_TO_CART:
       let newItem = state.products.find(
         (product: any) => product.id === action.payload
       );
-      console.log(newItem);
 
-      let itemInCart = state.cart.find((item: any) => item.id === newItem.id);
-      console.log(itemInCart);
+      let itemInCart = state.cart.find((item: any) => item.id === newItem?.id);
       return itemInCart
         ? {
             ...state,
             cart: state.cart.map((item: any) =>
-              item.id === newItem.id
+              item.id === newItem?.id
                 ? { ...item, quantity: item.quantity }
                 : item
             ),
@@ -41,13 +40,13 @@ export function rootReducer(state = initialState, action: any) {
             cart: [...state.cart, { ...newItem, quantity: 1 }],
           };
 
-    case TYPES.CLEAR_CART:
+    case TYPES_SHOPPING.CLEAR_CART:
       return {
         ...state,
         cart: [],
       };
 
-    case TYPES.REMOVE_ONE_FROM_CART: {
+    case TYPES_SHOPPING.REMOVE_ONE_FROM_CART: {
       let itemToDelete = state.cart.find(
         (item: any) => item.id === action.payload
       );
@@ -67,14 +66,14 @@ export function rootReducer(state = initialState, action: any) {
           };
     }
 
-    case TYPES.REMOVE_ALL_FROM_CART: {
+    case TYPES_SHOPPING.REMOVE_ALL_FROM_CART: {
       return {
         ...state,
         cart: state.cart.filter((item: any) => item.id !== action.payload),
       };
     }
 
-    case TYPES.ADD_ONE_FROM_CART: {
+    case TYPES_SHOPPING.ADD_ONE_FROM_CART: {
       return {
         ...state,
         cart: state.cart.map((item: any) =>

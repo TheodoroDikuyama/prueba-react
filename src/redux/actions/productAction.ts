@@ -1,0 +1,4 @@
+export const TYPES_PRODUCT = {
+  GET_PRODUCTS: "GET_PRODUCTS",
+  GET_DETAILS: "GET_DETAILS",
+};

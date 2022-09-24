@@ -3,7 +3,7 @@ import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
     <div className={styles.containerFooter}>
       <h1> SÍGUENOS </h1>

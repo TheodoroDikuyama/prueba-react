@@ -5,7 +5,7 @@ import { BsCartPlus } from "react-icons/bs";
 import { Sidebar } from "../Sidebar/Sidebar";
 import { DetallesHooks } from "./hooks";
 
-export const Detalles = () => {
+export const Detalles: React.FC = () => {
   const { addToCart, productDetail, open } = DetallesHooks();
   return (
     <div>

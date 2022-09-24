@@ -6,7 +6,7 @@ import { Card } from "../Card/Card";
 import { Homehooks } from "./hooks";
 import { Link } from "react-router-dom";
 
-export const Home = () => {
+export const Home: React.FC = () => {
   const { productos } = Homehooks();
 
   return (
@@ -20,10 +20,10 @@ export const Home = () => {
       </div>
 
       <div className={styles.cardGrid}>
-        {productos?.map((p, index) => (
-          <div>
+        {productos?.map((p, index: number) => (
+          <div key={index}>
             <Link to={`/productos/${p.id}`}>
-              <Card key={index} title={p.title.slice(0, 20)} image={p.image} />
+              <Card title={p.title.slice(0, 20)} image={p.image} />
             </Link>
           </div>
         ))}
