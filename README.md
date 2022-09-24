@@ -27,6 +27,9 @@ La web consiste en:
 - Una imagen que hace de banner publicitario
 - Cuatro cards de productos con sus respectivas imagenes y nombres
 - Footer(links a las paginas principales de facebook,intagram y twiter)
+  <img src='./src/assets/navbar.jpg'>
+  <img src='./src/assets/home.jpg'>
+  <img src='./src/assets/footer.jpg'>
 
 ## Componente Productos:
 
@@ -34,6 +37,9 @@ La web consiste en:
 - Navbar(links a home y productos)
 - Listado de 20 productos con su respectivo titulo, imagen y precio (link al detalle de cada articulo)
 - Footer(links a las paginas principales de facebook,intagram y twiter)
+  <img src='./src/assets/navbar.jpg'>
+  <img src='./src/assets/productos.jpg'>
+  <img src='./src/assets/footer.jpg'>
 
 ## Componente Detalle:
 
@@ -42,6 +48,9 @@ La web consiste en:
 - Detalle del producto seleccionado en el componente productos. Contiene: Una imagen agrandada, titulo, precio y descripcion
 - Boton para agregar al carrito
 - Footer(links a las paginas principales de facebook,intagram y twiter)
+  <img src='./src/assets/navbar.jpg'>
+  <img src='./src/assets/Detalle.jpg'>
+  <img src='./src/assets/footer.jpg'>
 
 ## Componente Sidebar:
 
