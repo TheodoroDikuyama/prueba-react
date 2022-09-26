@@ -1,0 +1,19 @@
+@mixin flex($display, $direction: "", $just: "") {
+  display: $display;
+  flex-direction: $direction;
+  justify-content: $just;
+}
+
+@mixin media($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+}

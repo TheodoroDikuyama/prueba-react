@@ -1,34 +1,56 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
 .containerCart {
-  display: flex;
-  flex-direction: column;
-  margin-left: 2vw;
-  margin-right: 2vw;
-  overflow: hidden;
-  overflow-x: hidden;
+  @include flex(flex, column);
+  margin-left: 3vw;
+  margin-right: 3vw;
   margin-top: 2vw;
+  min-height: 100vh;
+
   .header {
     display: inline-flex;
     h1 {
-      font-size: 25;
+      font-family: $font;
+      font-weight: $weight800;
+      font-size: 20;
       margin-top: 1.5vh;
     }
   }
   .total {
+    font-size: large;
+    h1 {
+      font-family: $font;
+      font-weight: $weight800;
+    }
+    span {
+      font-family: $font;
+      font-weight: $weight500;
+    }
     position: fixed;
     bottom: 0;
-    margin-bottom: 8vh;
-    margin-left: 3vw;
+    margin-bottom: 10vh;
   }
 
   .buttonCheckOut {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     margin-bottom: 3vh;
-    margin-left: 3vw;
-    width: 15vw;
+    padding: 1vh 0;
+    width: 22vw;
+    font-family: $font;
+    font-weight: $weight700;
     background-color: #000;
     color: #fff;
     border-radius: 3px;
+    border: 0;
     cursor: pointer;
+    @include media(768px) {
+      width: 44vw;
+    }
+  }
+
+  @include media(768px) {
+    width: 70vw;
   }
 }

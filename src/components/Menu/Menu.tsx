@@ -1,8 +1,8 @@
-import styles from "./menu.module.scss";
-import * as React from "react";
+import { BiMenuAltRight } from "react-icons/bi";
+import { AiOutlineClose } from "react-icons/ai";
+import styles from "./Menu.module.scss";
 import { Link } from "react-router-dom";
-import { BsShop } from "react-icons/bs";
-import { FaShippingFast } from "react-icons/fa";
+import { MenuHooks } from "./hooks";
 
 const items: { id: number; title: string; route: string }[] = [
   {
@@ -17,26 +17,38 @@ const items: { id: number; title: string; route: string }[] = [
   },
 ];
 
-export const Menu: React.FC = () => {
+export const Menu = () => {
+  const { menuToggleHandler, menuOpen, size } = MenuHooks();
+
   return (
-    <div className={styles.container}>
-      <header>
-        <FaShippingFast size={15} />
-        <h1>ENVIOS GRATIS</h1>
-      </header>
-      <nav>
-        <div className={styles.title}>
-          <BsShop size={20} />
-          <h1>APLICACION DE COMPRAS</h1>
+    <header className={styles.header}>
+      <div className={styles.header__content}>
+        <Link to="/" className={styles.header__content__logo}>
+          E-COMMERCE
+        </Link>
+        <nav
+          className={`${styles.header__content__nav} ${
+            menuOpen && size.width < 768 ? styles.isMenu : ""
+          }`}
+        >
+          <ul>
+            {items.map((i) => (
+              <li key={i.id}>
+                <Link onClick={menuToggleHandler} to={i.route}>
+                  {i.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div className={styles.header__content__toggle}>
+          {!menuOpen ? (
+            <BiMenuAltRight onClick={menuToggleHandler} />
+          ) : (
+            <AiOutlineClose onClick={menuToggleHandler} />
+          )}
         </div>
-        <ul className={styles.items}>
-          {items.map((i) => (
-            <li key={i.id}>
-              <Link to={i.route}>{i.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+      </div>
+    </header>
   );
 };

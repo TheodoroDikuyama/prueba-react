@@ -20,32 +20,36 @@ export const Cart: React.FC = () => {
 
       <div>
         {cart?.map((c: CartProducts, index: number) => (
-          <CartItem
-            key={index}
-            title={c.title}
-            image={c.image}
-            price={c.price}
-            quantity={c.quantity}
-            id={c.id}
-          />
+          <div key={index}>
+            <CartItem
+              title={c.title}
+              image={c.image}
+              price={c.price}
+              quantity={c.quantity}
+              id={c.id}
+            />
+            <Divider light />
+          </div>
         ))}
       </div>
 
-      <span className={styles.total}>
-        Total:
-        {cart
-          ?.reduce(
-            (
-              acc: number,
-              { price, quantity }: { price: number; quantity: number }
-            ) => acc + quantity * price,
-            0
-          )
-          .toFixed(2)}
-      </span>
+      <h1 className={styles.total}>
+        TOTAL:{" "}
+        <span>
+          {cart
+            ?.reduce(
+              (
+                acc: number,
+                { price, quantity }: { price: number; quantity: number }
+              ) => acc + quantity * price,
+              0
+            )
+            .toFixed(2)}
+        </span>
+      </h1>
 
       <button className={styles.buttonCheckOut} onClick={() => checkOut()}>
-        Finalizar Compra
+        FINALIZAR COMPRA
       </button>
     </div>
   );

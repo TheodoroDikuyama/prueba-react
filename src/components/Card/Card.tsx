@@ -7,6 +7,7 @@ export const Card: React.FC<ProductosI> = ({ title, image, price }) => {
     <div className={styles.containerCard}>
       <h1>{title}</h1>
       {price ? <span>${price}</span> : <></>}
+
       <div className={styles.containerImg}>
         <img src={image} alt={title} />
       </div>

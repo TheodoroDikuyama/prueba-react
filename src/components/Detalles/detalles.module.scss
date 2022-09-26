@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;600&display=swap%27");
-
-$font: "Kanit", sans-serif;
+@import "../../scss/variables";
+@import "../../scss/mixins";
 
 .gridLayout {
   display: grid;
@@ -10,10 +9,7 @@ $font: "Kanit", sans-serif;
   margin-right: 3vh;
 
   .columna1 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
+    @include flex(flex, column, center);
     img {
       width: 30vw;
       margin: 0 auto;
@@ -23,45 +19,73 @@ $font: "Kanit", sans-serif;
   .columna2 {
     display: flex;
     flex-direction: column;
+    margin-right: 3vw;
+    h1 {
+      font-family: $font;
+      font-size: 45px;
+      font-weight: 800;
+      text-align: left;
+    }
+
+    .category {
+      font-family: $font;
+      font-weight: 500;
+    }
+
+    .price {
+      font-family: $font;
+      font-weight: 400;
+    }
 
     .descripcion {
       margin-top: 10vh;
       margin-bottom: 10vh;
+      text-align: justify;
       h1 {
         font-size: 25px;
       }
+      p {
+        font-family: $font;
+        font-size: 20px;
+        margin-top: 2vh;
+      }
     }
 
-    p {
-      font-family: $font;
-      margin-bottom: 2vh;
-      font-size: 20px;
-      margin-top: 2vh;
-    }
-    h1 {
-      font-family: $font;
-      font-size: 50px;
-      font-weight: 600;
-    }
-
-    .carrito {
+    .buttonCart {
       margin-bottom: 0;
       button {
+        text-transform: uppercase;
         border: 0;
         padding: 10px;
         display: inline-flex;
         align-items: center;
         font-family: $font;
-        font-weight: 600;
+        font-weight: 700;
         border-radius: 3px;
         cursor: pointer;
         background-color: #000;
         color: #fff;
-        height: 5vh;
+        height: 10vh;
       }
 
       button:hover {
         background-color: #1d1d1d;
+      }
+    }
+  }
+
+  @include media(960px) {
+    @include flex(flex, column);
+    .columna2 {
+      h1 {
+        font-size: 25px;
+        text-align: left;
+      }
+      margin-left: 3vw;
+      margin-right: 3vw;
+      .descripcion {
+        margin-top: 5vh;
+        text-align: justify;
       }
     }
   }

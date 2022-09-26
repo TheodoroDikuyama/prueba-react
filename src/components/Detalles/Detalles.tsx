@@ -1,6 +1,6 @@
 import { Footer } from "../Footer/Footer";
 import { Menu } from "../Menu/Menu";
-import styles from "./detalles.module.scss";
+import styles from "./Detalles.module.scss";
 import { BsCartPlus } from "react-icons/bs";
 import { Sidebar } from "../Sidebar/Sidebar";
 import { DetallesHooks } from "./hooks";
@@ -19,13 +19,15 @@ export const Detalles: React.FC = () => {
         <div className={styles.columna2}>
           <h1>{productDetail?.title}</h1>
           <hr></hr>
-          <p>• {productDetail?.category?.toUpperCase()}</p>
-          <p>${productDetail?.price}</p>
+          <p className={styles.category}>
+            • {productDetail?.category?.toUpperCase()}
+          </p>
+          <p className={styles.price}>${productDetail?.price}</p>
           <div className={styles.descripcion}>
             <h1>Descripcion</h1>
             <p>{productDetail?.description}</p>
           </div>
-          <div className={styles.carrito}>
+          <div className={styles.buttonCart}>
             <button onClick={addToCart}>
               <BsCartPlus style={{ marginRight: "7px" }} size={20} />
               Añadir al carrito

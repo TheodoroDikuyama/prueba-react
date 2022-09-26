@@ -3,12 +3,14 @@
 
 .containerFooter {
   @include flex(flex, column);
-  border-top: 1px solid #ebebeb;
-  background-color: #ebebeb;
+  background-color: $dark;
+  border-top: 1px solid #fff;
+  bottom: 0;
+  padding: 5vh 0;
 
   h1 {
     text-align: center;
-    margin-top: 5vh;
+    color: $light;
     font-family: $font;
     cursor: default;
   }
@@ -23,6 +25,12 @@
     a {
       text-decoration: none;
       color: inherit;
+    }
+  }
+
+  @include media(768px) {
+    h1 {
+      font-size: 20px;
     }
   }
 }

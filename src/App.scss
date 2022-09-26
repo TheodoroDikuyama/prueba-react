@@ -2,4 +2,9 @@
   margin: 0;
   box-sizing: border-box;
   outline: none;
+  position: relative;
+}
+
+body {
+  min-height: 100vh;
 }

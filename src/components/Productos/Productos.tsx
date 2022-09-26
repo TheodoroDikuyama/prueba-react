@@ -1,4 +1,4 @@
-import styles from "./productos.module.scss";
+import styles from "./Productos.module.scss";
 import { Menu } from "../Menu/Menu";
 import { Footer } from "../Footer/Footer";
 import { Card } from "../Card/Card";
@@ -9,23 +9,24 @@ export const Productos = () => {
   const { productos } = ProductosHooks();
 
   return (
-    <div className={styles.container}>
+    <div>
       <Menu />
+      <div className={styles.container}>
+        <h1 className={styles.titulo}>PRODUCTOS</h1>
 
-      <h1 className={styles.titulo}>PRODUCTOS</h1>
-
-      <div className={styles.cardGrid}>
-        {productos?.map((p) => (
-          <div key={p.id}>
-            <Link to={`/productos/${p.id}`}>
-              <Card
-                title={p.title.slice(0, 20)}
-                image={p.image}
-                price={p.price}
-              />
-            </Link>
-          </div>
-        ))}
+        <div className={styles.cardGrid}>
+          {productos?.map((p) => (
+            <div key={p.id}>
+              <Link to={`/productos/${p.id}`}>
+                <Card
+                  title={p.title.slice(0, 20)}
+                  image={p.image}
+                  price={p.price}
+                />
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
       <Footer />
     </div>

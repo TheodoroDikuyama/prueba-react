@@ -3,22 +3,23 @@
 
 .containerCard {
   @include flex(flex, column);
-  border: 1px solid #7a7a7a;
-  width: 10vw;
+  border: 1px solid #cecece;
+  width: 25vw;
   height: 30vh;
-  margin-bottom: 3vh;
   border-radius: 3px;
   box-shadow: 3px 3px #cecece;
+  padding: 2vh 2vh;
+  align-items: center;
 
   h1 {
     text-align: center;
     font-family: $font;
-    font-weight: 600;
+    font-weight: $weight800;
     font-size: medium;
   }
+
   .containerImg {
     @include flex(flex, center);
-
     img {
       width: 5vw;
     }
@@ -27,5 +28,17 @@
   span {
     font-family: $font;
     text-align: center;
+    font-weight: $weight400;
+  }
+
+  @include media(480px) {
+    width: 50vw;
+    height: 50vh;
+    padding: 2vh 2vh;
+    .containerImg {
+      img {
+        width: 20vw;
+      }
+    }
   }
 }

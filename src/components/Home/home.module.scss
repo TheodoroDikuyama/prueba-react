@@ -3,45 +3,67 @@
 
 .container {
   @include flex(flex, column);
-  height: 100%;
-  overflow: hidden;
 
   .containerImg {
     @include flex(flex, "", center);
-    margin-top: 15vh;
-
-    img {
-      border-radius: 3px;
-      width: 60vw;
-      height: 30vh;
-      box-shadow: 3px 3px #cecece;
+    align-items: center;
+    min-height: $minHeight;
+    background-image: url(../../assets/banner1.jpg);
+    background-size: cover;
+    color: $light;
+    h1 {
+      letter-spacing: 2vw;
+      font-family: $font;
+      font-weight: $weight400;
+      span {
+        letter-spacing: 2vw;
+        font-family: $font;
+        font-weight: $weight800;
+      }
+    }
+    @include media(480px) {
+      background-size: cover;
+      h1 {
+        font-size: 25px;
+      }
     }
   }
 
   .aboutUs {
-    @include flex(flex, column);
+    @include flex(flex, column, center);
     margin: 0 auto;
-    width: 60vw;
-    margin-bottom: 15vh;
-
+    min-height: 50vh;
+    width: 100vw;
+    background-color: $dark;
+    color: $light;
+    align-items: center;
     h1 {
       text-align: center;
       font-family: $font;
+      font-weight: $weight800;
     }
     p {
+      width: 60vw;
       margin-top: 2vh;
       text-align: justify;
       font-family: $font;
+      font-weight: $weight400;
+    }
+    @include media(768px) {
+      h1 {
+        font-size: medium;
+      }
+      p {
+        font-size: small;
+      }
     }
   }
 
   .cardGrid {
-    width: 60vw;
+    min-height: $minHeight;
+    align-items: center;
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    margin: 0 auto;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
 
     a {
       text-decoration: none;
