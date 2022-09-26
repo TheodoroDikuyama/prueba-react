@@ -63,7 +63,7 @@
     min-height: $minHeight;
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+    grid-template-columns: auto auto;
 
     a {
       text-decoration: none;
