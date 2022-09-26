@@ -20,7 +20,7 @@ Instala todas las dependecias necesarias para ejecutar el proyecto
 
 ## PRUEBA REACT
 
-Ejercicio orientado a la creacion de un e-commerce haciendo uso de ReacJS.
+Ejercicio orientado a la creacion de un e-commerce,
 
 La web consiste en:
 
