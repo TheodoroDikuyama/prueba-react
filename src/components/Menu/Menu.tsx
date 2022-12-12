@@ -1,6 +1,6 @@
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
-import styles from "./Menu.module.scss";
+import styles from "./menu.module.scss";
 import { Link } from "react-router-dom";
 import { MenuHooks } from "./hooks";
 

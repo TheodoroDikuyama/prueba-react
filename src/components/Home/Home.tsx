@@ -1,6 +1,6 @@
 import { Footer } from "../Footer/Footer";
 import { Menu } from "../Menu/Menu";
-import styles from "./Home.module.scss";
+import styles from "./home.module.scss";
 import { Card } from "../Card/Card";
 import { Homehooks } from "./hooks";
 import { Link } from "react-router-dom";

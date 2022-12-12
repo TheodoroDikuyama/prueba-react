@@ -1,6 +1,6 @@
 import { Footer } from "../Footer/Footer";
 import { Menu } from "../Menu/Menu";
-import styles from "./Detalles.module.scss";
+import styles from "./detalles.module.scss";
 import { BsCartPlus } from "react-icons/bs";
 import { Sidebar } from "../Sidebar/Sidebar";
 import { DetallesHooks } from "./hooks";

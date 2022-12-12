@@ -1,4 +1,4 @@
-import styles from "./Footer.module.scss";
+import styles from "./footer.module.scss";
 import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";

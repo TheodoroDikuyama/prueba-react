@@ -1,4 +1,4 @@
-import styles from "./Productos.module.scss";
+import styles from "./productos.module.scss";
 import { Menu } from "../Menu/Menu";
 import { Footer } from "../Footer/Footer";
 import { Card } from "../Card/Card";
